@@ -79,11 +79,6 @@ test('Checkout with only postal code', async ({ page }) => {
 })
 
 test('Verify button cancel in checkout:your information', async ({ page }) => {
-    await page.locator('#add-to-cart-sauce-labs-backpack').click();
-    await page.waitForTimeout(1000);
-    await page.locator('.shopping_cart_link').click();
-    await page.waitForTimeout(1000);
-    await expect(page.locator('.inventory_item_name')).toHaveCount(1);
     await page.locator('#checkout').click();
     await expect(page.locator('.title')).toHaveText('Checkout: Your Information');
     await page.waitForTimeout(1000);
@@ -93,11 +88,6 @@ test('Verify button cancel in checkout:your information', async ({ page }) => {
 })
 
 test('Verify button cancel in checkout:overview', async ({ page }) => {
-    await page.locator('#add-to-cart-sauce-labs-backpack').click();
-    await page.waitForTimeout(1000);
-    await page.locator('.shopping_cart_link').click();
-    await page.waitForTimeout(1000);
-    await expect(page.locator('.inventory_item_name')).toHaveCount(1);
     await page.locator('#checkout').click();
     await expect(page.locator('.title')).toHaveText('Checkout: Your Information');
     await page.waitForTimeout(1000);
@@ -116,11 +106,6 @@ test('Verify button cancel in checkout:overview', async ({ page }) => {
 })
 
 test('Verify checkout finish', async ({ page }) => {
-    await page.locator('#add-to-cart-sauce-labs-backpack').click();
-    await page.waitForTimeout(1000);
-    await page.locator('.shopping_cart_link').click();
-    await page.waitForTimeout(1000);
-    await expect(page.locator('.inventory_item_name')).toHaveCount(1);
     await page.locator('#checkout').click();
     await expect(page.locator('.title')).toHaveText('Checkout: Your Information');
     await page.waitForTimeout(1000);
